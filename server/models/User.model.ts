@@ -35,6 +35,7 @@ const userSchema = new Schema(
   }
 );
 
+// for hash pass👇👇
 userSchema.pre("save", async function (next) {
   if (!this.isModified("password")) return next();
 
