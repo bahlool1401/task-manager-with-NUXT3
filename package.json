@@ -22,6 +22,7 @@
   "devDependencies": {
     "@nuxt/ui": "^3.0.2",
     "@sidebase/nuxt-auth": "^0.10.1",
+    "@types/bcryptjs": "^3.0.0",
     "mongoose": "^8.13.2",
     "nuxt-server-utils": "^0.0.7",
     "zod": "^3.24.2"

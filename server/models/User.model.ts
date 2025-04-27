@@ -41,7 +41,6 @@ userSchema.pre("save", async function (next) {
 
   this.password = await generateHash(this.password);
 
-  next();
 });
 
 userSchema.methods.comparePassword = async function (password: string) {
