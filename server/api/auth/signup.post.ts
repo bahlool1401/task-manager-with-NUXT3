@@ -1,5 +1,6 @@
 import {Validator} from 'nuxt-server-utils'
-
+import SignupSchema from '~/schemas/signup.schema'
+import {User} from '~/server/models/User.model'
 
 
 export default defineEventHandler(async (event)=>{
@@ -7,5 +8,9 @@ export default defineEventHandler(async (event)=>{
 
     Validator.validateSchema(SignupSchema,body)
 
-    return "ok"
+    const user = await User.create(body)
+
+
+    // return "ok"
+    return user
 }) 
