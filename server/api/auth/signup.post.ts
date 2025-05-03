@@ -12,5 +12,5 @@ export default defineEventHandler(async (event)=>{
 
 
     // return "ok"
-    return user
+    return {...user.toObject(), password:undefined}
 }) 
