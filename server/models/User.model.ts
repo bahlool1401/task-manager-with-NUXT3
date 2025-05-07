@@ -10,6 +10,7 @@ export interface UserDocument extends Document {
   stripeCustomerId?: string; /*it can be also undefined*/
 }
 
+
 const userSchema = new Schema(
   {
     name: {
@@ -36,6 +37,7 @@ const userSchema = new Schema(
     timestamps: true,
   });
 
+
 // for hash pass👇👇
 userSchema.pre("save", async function (next) {
   if (!this.isModified("password")) return next();
@@ -43,9 +45,12 @@ userSchema.pre("save", async function (next) {
 
 }); 
 
+
 userSchema.methods.comparePassword   = async function (password: string) {
   return await bcrypt.compare(password, this.password);
 };
+
+
 
 export const User = model<UserDocument>("User", userSchema);
  
