@@ -9,7 +9,6 @@ export default defineEventHandler(async (event)=>{
 
     Validator.validateSchema(SignupSchema,body)
 
-
     const user = await User.create(body)
 
 

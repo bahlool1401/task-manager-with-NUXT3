@@ -6,6 +6,7 @@ export default defineNuxtConfig({
   modules:['@nuxt/ui', 'nuxt-server-utils'],
   ui:{} , 
 
+  
   nuxtServerUtils:{
     mongodbUrl:process.env.MONGODB_URI
   }

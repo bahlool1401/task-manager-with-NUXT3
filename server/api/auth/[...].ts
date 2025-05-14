@@ -1,3 +1,2 @@
-import 
 
 export default nuxtAuthHandler
