@@ -9,5 +9,12 @@ export default defineNuxtConfig({
   
   nuxtServerUtils:{
     mongodbUrl:process.env.MONGODB_URI
+  },
+  
+  auth:{
+    baseUrl:process.env.AUTH_ORIGIN,
+    provider:{
+      type: "authjs"
+    }
   }
 })
