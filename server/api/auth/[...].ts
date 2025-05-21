@@ -1,2 +1,4 @@
 
-export default nuxtAuthHandler
+export default nuxtAuthHandler({
+    secret : useRuntimeConfig().auth.secret
+})
